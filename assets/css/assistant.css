@@ -1,0 +1,92 @@
+/* Chat Assistant Styles */
+.chat-container {
+  height: 500px;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  position: relative;
+  line-height: 1.4;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #4361ee;
+  color: white;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background-color: white;
+  border: 1px solid #e9ecef;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.message-content {
+  word-wrap: break-word;
+}
+
+.message-time {
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.suggestions {
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #e9ecef;
+}
+
+.suggestion-btn {
+  white-space: nowrap;
+}
+
+.service-info {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #e9ecef;
+}
+
+/* Animation for typing indicator */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.typing-indicator span {
+  animation: blink 1.4s infinite both;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chat-container {
+    height: 70vh;
+  }
+  
+  .message {
+    max-width: 90%;
+  }
+}
